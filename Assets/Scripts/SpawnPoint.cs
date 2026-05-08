@@ -6,36 +6,30 @@ public class SpawnPoint : MonoBehaviour
 {
     [SerializeField]
     private float delaySpawn = 2.0f;
+    [SerializeField]
     private GameObject prefabObjet;
 
-    private GameObject objetActuel;
-
-    void Start()
-    {
-        //Donner référence au spawn à l'objet qui est déjà dans la scène
-        ObjetRamassable ramassable = objetActuel.GetComponent<ObjetRamassable>();
-        if (ramassable != null)
-        {
-            ramassable.spawnPoint = this;
-        }
-    }
-
+    //Méthode qui spawn l'objet choisi pris par l'utilisateur 
     private void SpawnerObjet()
     {
-        objetActuel = Instantiate(prefabObjet, transform.position, transform.rotation);
+        GameObject nouveauObjet = Instantiate(prefabObjet, transform.position, transform.rotation);
 
-        ObjetRamassable ramassable = objetActuel.GetComponent<ObjetRamassable>();
+        //Assigner le spawn point au nouvel objet
+        ObjetRamassable ramassable = nouveauObjet.GetComponent<ObjetRamassable>();
         if (ramassable != null)
         {
             ramassable.spawnPoint = this;
         }
+           
     }
 
+    //Lancer la coroutine après grab
     public void ObjetRamasse()
     {
         StartCoroutine(RespawnApresDelai());
     }
-
+    
+    //Delay de deux secondes
     private IEnumerator RespawnApresDelai()
     {
         yield return new WaitForSeconds(delaySpawn);
