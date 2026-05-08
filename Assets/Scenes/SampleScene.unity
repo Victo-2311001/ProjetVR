@@ -467,6 +467,7 @@ GameObject:
   - component: {fileID: 787419067}
   - component: {fileID: 787419069}
   - component: {fileID: 787419068}
+  - component: {fileID: 787419070}
   m_Layer: 0
   m_Name: Socket
   m_TagString: Untagged
@@ -520,10 +521,34 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 787419070}
+        m_TargetAssemblyTypeName: ShakerSocket, Assembly-CSharp
+        m_MethodName: OnSocketEntered
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 787419070}
+        m_TargetAssemblyTypeName: ShakerSocket, Assembly-CSharp
+        m_MethodName: OnSocketExited
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
   m_ShowInteractableHoverMeshes: 1
@@ -558,6 +583,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &787419070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787419066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96937194eb7bc3c4ca3d59b789721913, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShakerSocket
+  topCollider: {fileID: 8328065657101740174}
+  baseCollider: {fileID: 6886713078674162126}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -2358,9 +2397,9 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!136 &6886713078674162126
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2655,9 +2694,9 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 2
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!23 &8541017351820862272
 MeshRenderer:
   m_ObjectHideFlags: 0
