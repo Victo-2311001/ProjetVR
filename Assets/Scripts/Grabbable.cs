@@ -67,9 +67,6 @@ public class Grabbable : MonoBehaviour
             MusiqueControlleur.Instance.JouerSonOeuf();
         }
 
-        //audioSource.clip = sons[0];
-        //audioSource.Play();
-
         RetourHaptiqueControlleur.Instance.AttacherControleur(controlleur);
 
         RetourHaptiqueControlleur.Instance.RetourHaptiqueGrabObjet();
