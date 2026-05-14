@@ -9,6 +9,12 @@ public class SpawnPoint : MonoBehaviour
     [SerializeField]
     private GameObject prefabObjet;
 
+    [SerializeField]
+    private AudioSource audioSource;
+
+    [SerializeField]
+    private AudioClip sonSpawn;
+
     //Méthode qui spawn l'objet choisi pris par l'utilisateur 
     private void SpawnerObjet()
     {
@@ -19,6 +25,8 @@ public class SpawnPoint : MonoBehaviour
         if (ramassable != null)
         {
             ramassable.spawnPoint = this;
+            SonControlleur.Instance.transform.position = ramassable.transform.position;
+            audioSource.PlayOneShot(sonSpawn);
         }
            
     }

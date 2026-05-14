@@ -58,15 +58,15 @@ public class Grabbable : MonoBehaviour
         // Comparer le tag de l'objet pris
         if (objetPris.CompareTag("Biere") || objetPris.CompareTag("Saque") || objetPris.CompareTag("Vanille"))
         {
-            MusiqueControlleur.Instance.JouerSonBouteille();
+            SonControlleur.Instance.JouerSonBouteille();
         }
         else if (objetPris.CompareTag("Soda") || objetPris.CompareTag("Monster"))
         {
-            MusiqueControlleur.Instance.JouerSonCannette();
+            SonControlleur.Instance.JouerSonCannette();
         }
         else if(objetPris.CompareTag("Oeuf"))
         {
-            MusiqueControlleur.Instance.JouerSonOeuf();
+            SonControlleur.Instance.JouerSonOeuf();
         }
 
         RetourHaptiqueControlleur.Instance.AttacherControleur(controlleur);

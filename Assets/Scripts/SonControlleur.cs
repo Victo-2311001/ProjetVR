@@ -1,9 +1,9 @@
 using UnityEngine;
 using UnityEngine.Audio;
 
-public class MusiqueControlleur : MonoBehaviour
+public class SonControlleur : MonoBehaviour
 {
-    public static MusiqueControlleur Instance;
+    public static SonControlleur Instance;
 
     [SerializeField]
     private AudioClip[] audioClip;
