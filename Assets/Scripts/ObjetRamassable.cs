@@ -9,9 +9,12 @@ public class ObjetRamassable : MonoBehaviour
 
     private XRGrabInteractable grabInteractable;
 
+    private bool objetPris;
+
     void Awake()
     {
         grabInteractable = GetComponent<XRGrabInteractable>();
+        objetPris = false;
     }
 
     void OnEnable()
@@ -29,6 +32,16 @@ public class ObjetRamassable : MonoBehaviour
         if (spawnPoint != null)
         {
             spawnPoint.ObjetRamasse();
+            objetPris = true;
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+
+        if(objetPris && collision.gameObject.CompareTag("Table") || collision.gameObject.CompareTag("Planche"))
+        {
+            Destroy(gameObject);
         }
     }
 }
