@@ -88,15 +88,24 @@ public class Grabbable : MonoBehaviour
     //Défaite si shake tombe à terre
     private void OnCollisionEnter(Collision collision)
     {
+
+        if (objetPris == null) return;
+
         //Vérifier que c'est bien le shake ou le top du shake qui a tombé par terre
-        if (objetPris.CompareTag("Shake") || objetPris.CompareTag("TopShake"))
+        if (objetPris.CompareTag("Shake") || objetPris.CompareTag("TopShake") )
         {
-            if (collision.gameObject.CompareTag("Planche"))
+            if (collision.gameObject.CompareTag("Planche") || objetPris.CompareTag("Poubelle"))
             {
                 //Appeler méthode responsable de terminer le jeu et détruire le shake
                 GameController.Instance.Defaite();
                 Destroy(gameObject);
             }
+        }
+
+        if (collision.gameObject.CompareTag("Poubelle"))
+        {
+            //Détruire les objets sans pénalités
+            Destroy(gameObject);
         }
     }
 }

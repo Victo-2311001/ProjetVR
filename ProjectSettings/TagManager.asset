@@ -15,6 +15,7 @@ TagManager:
   - Planche
   - Shake
   - TopShake
+  - Poubelle
   layers:
   - Default
   - TransparentFX
