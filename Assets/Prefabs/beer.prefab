@@ -47,9 +47,10 @@ GameObject:
   - component: {fileID: 6620140545901288776}
   - component: {fileID: 7196867911583027124}
   - component: {fileID: 403446723203246158}
+  - component: {fileID: 8911837605458035907}
   m_Layer: 0
   m_Name: beer
-  m_TagString: Untagged
+  m_TagString: Biere
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -340,3 +341,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjetRamassable
   spawnPoint: {fileID: 0}
+--- !u!114 &8911837605458035907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7286786367243441728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b71c742a71d00dd4dbd4e475c1109d6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Grabbable

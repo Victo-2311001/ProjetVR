@@ -16,9 +16,10 @@ GameObject:
   - component: {fileID: 7724932816654256811}
   - component: {fileID: 8869312763558576547}
   - component: {fileID: 5262578357772115642}
+  - component: {fileID: 3167476876088581220}
   m_Layer: 0
   m_Name: soda
-  m_TagString: Untagged
+  m_TagString: Soda
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -308,3 +309,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjetRamassable
   spawnPoint: {fileID: 0}
+--- !u!114 &3167476876088581220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790277316163629162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b71c742a71d00dd4dbd4e475c1109d6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Grabbable
