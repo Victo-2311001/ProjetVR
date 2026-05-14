@@ -13,6 +13,8 @@ TagManager:
   - MusiqueControlleur
   - Table
   - Planche
+  - Shake
+  - TopShake
   layers:
   - Default
   - TransparentFX

@@ -36,9 +36,9 @@ public class ObjetRamassable : MonoBehaviour
         }
     }
 
+    //Détruire les objets qui tombe à terre ou sur la table 
     private void OnCollisionEnter(Collision collision)
     {
-
         if(objetPris && collision.gameObject.CompareTag("Table") || collision.gameObject.CompareTag("Planche"))
         {
             Destroy(gameObject);

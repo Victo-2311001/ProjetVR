@@ -14,6 +14,8 @@ public class Grabbable : MonoBehaviour
     [SerializeField]
     private GameObject musiqueControlleur;
 
+    private GameObject objetPris;
+
     private void Awake()
     {
         grabInteractable = GetComponent<XRGrabInteractable>();
@@ -49,7 +51,7 @@ public class Grabbable : MonoBehaviour
         controlleur = args.interactorObject.transform.GetComponent<XRBaseInputInteractor>();
 
         // Récupérer l'objet pris
-        GameObject objetPris = args.interactableObject.transform.gameObject;
+        objetPris = args.interactableObject.transform.gameObject;
 
         musiqueControlleur.transform.position = objetPris.transform.position;
 
@@ -81,5 +83,20 @@ public class Grabbable : MonoBehaviour
         controlleur = args.interactorObject.transform.GetComponent<XRBaseInputInteractor>();
 
         RetourHaptiqueControlleur.Instance.RetourHaptiqueUngrabObjet();
+    }
+
+    //Défaite si shake tombe à terre
+    private void OnCollisionEnter(Collision collision)
+    {
+        //Vérifier que c'est bien le shake ou le top du shake qui a tombé par terre
+        if (objetPris.CompareTag("Shake") || objetPris.CompareTag("TopShake"))
+        {
+            if (collision.gameObject.CompareTag("Planche"))
+            {
+                //Appeler méthode responsable de terminer le jeu et détruire le shake
+                GameController.Instance.Defaite();
+                Destroy(gameObject);
+            }
+        }
     }
 }
