@@ -18,12 +18,16 @@ public class GameController : MonoBehaviour
 
     [Header("Textes")]
     [SerializeField] private TextMeshProUGUI texteTimer;
+    [SerializeField] private TextMeshProUGUI texteFin;
+
 
     public EtatJeu etatActuel { get; private set; }
 
     [SerializeField] private float dureePartie = 60f;
     private float tempsEcoule;
     private bool timerActif;
+
+    private bool victoire = false;
     public bool partieTerminee { get; private set; }
 
     //Singleton pour accèder le GameController dans les autres classes
@@ -56,8 +60,14 @@ public class GameController : MonoBehaviour
             //Terminer jeu si temps écoulé
             if (tempsEcoule >= dureePartie)
             {
-                TerminerPartie();
+                if (victoire)
+                {
+                    Victoire();
+                }
+
+                Defaite();
             }
+
         }
     }
 
@@ -79,11 +89,19 @@ public class GameController : MonoBehaviour
     }
 
 
-    //Afficher l'écran final avec les points
-    private void TerminerPartie()
+    //Afficher l'écran final de victoire
+    private void Victoire()
     {
         timerActif = false;
-        Debug.Log("Jeu terminé");
+        texteFin.text = "Jeu terminé, vous avez gagné";
+        ChangerEtat(EtatJeu.GameOver);
+    }
+
+    //Afficher l'écran final de défaite
+    public void Defaite()
+    {
+        timerActif = false;
+        texteFin.text = "Jeu terminé, vous avez perdu";
         ChangerEtat(EtatJeu.GameOver);
     }
 

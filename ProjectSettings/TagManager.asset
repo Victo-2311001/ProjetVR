@@ -11,6 +11,10 @@ TagManager:
   - Monster
   - Vanille
   - MusiqueControlleur
+  - Table
+  - Planche
+  - Shake
+  - TopShake
   layers:
   - Default
   - TransparentFX
