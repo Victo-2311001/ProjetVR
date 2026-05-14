@@ -47,9 +47,10 @@ GameObject:
   - component: {fileID: 5487409064463313221}
   - component: {fileID: 3265311421606180904}
   - component: {fileID: 8108138605222701134}
+  - component: {fileID: 4716055214074922068}
   m_Layer: 0
   m_Name: saque
-  m_TagString: Untagged
+  m_TagString: Saque
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -341,6 +342,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjetRamassable
   spawnPoint: {fileID: 0}
+--- !u!114 &4716055214074922068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5824158044648755825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b71c742a71d00dd4dbd4e475c1109d6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Grabbable
 --- !u!1 &7038560192452101329
 GameObject:
   m_ObjectHideFlags: 0
