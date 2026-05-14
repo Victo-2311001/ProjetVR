@@ -88,6 +88,9 @@ public class Grabbable : MonoBehaviour
     //Défaite si shake tombe à terre
     private void OnCollisionEnter(Collision collision)
     {
+
+        if (objetPris == null) return;
+
         //Vérifier que c'est bien le shake ou le top du shake qui a tombé par terre
         if (objetPris.CompareTag("Shake") || objetPris.CompareTag("TopShake") )
         {
