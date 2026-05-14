@@ -1,6 +1,8 @@
 using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 /// <summary>
 /// Classe responsable pour gérer les écrans, l'affichage des points et timer, et fonctions principales du jeu
@@ -19,7 +21,10 @@ public class GameController : MonoBehaviour
     [Header("Textes")]
     [SerializeField] private TextMeshProUGUI texteTimer;
     [SerializeField] private TextMeshProUGUI texteFin;
+    [SerializeField] private TextMeshProUGUI texteDrink;
 
+
+    List<string> drinks = new List<string>();
 
     public EtatJeu etatActuel { get; private set; }
 
@@ -44,10 +49,11 @@ public class GameController : MonoBehaviour
         partieTerminee = false;
     }
 
-    //Afficher le menu principal
+    //Afficher le menu principal et peupler la list de drinks
     private void Start()
     {
         ChangerEtat(EtatJeu.Menu);
+        ChargerListDrinks();
     }
 
     void Update()
@@ -71,6 +77,14 @@ public class GameController : MonoBehaviour
         }
     }
 
+    private void ChargerListDrinks()
+    {
+        drinks.Add("Vômit d'ogre");
+        drinks.Add("Jus de chaussette");
+        drinks.Add("Pisse d'orang-outan");
+        drinks.Add("Huile à moteur d'une grue");
+    }
+
     //Changer l'écran affichée selon l'état du jeu
     public void ChangerEtat(EtatJeu nouvelEtat)
     {
@@ -86,8 +100,16 @@ public class GameController : MonoBehaviour
         timerActif = true;
         partieTerminee = false;
         ChangerEtat(EtatJeu.EnJeu);
+        ChoisirDrink();
     }
 
+    private void ChoisirDrink()
+    {
+        int indexAleatoire = Random.Range(0, drinks.Count);
+        string drinkChoisi = drinks[indexAleatoire];
+
+        texteDrink.text = "Drink: " + drinkChoisi;
+    }
 
     //Afficher l'écran final de victoire
     private void Victoire()
@@ -111,6 +133,12 @@ public class GameController : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene(
             UnityEngine.SceneManagement.SceneManager.GetActiveScene().name
         );
+    }
+
+    //penalite de 3 secondes pour objet "cassé"
+    public void Penalite()
+    {
+        tempsEcoule += 3f;
     }
 
     //Convertir et afficher le temps

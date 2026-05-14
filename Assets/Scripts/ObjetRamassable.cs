@@ -41,6 +41,8 @@ public class ObjetRamassable : MonoBehaviour
     {
         if(objetPris && collision.gameObject.CompareTag("Table") || collision.gameObject.CompareTag("Planche"))
         {
+            //Ajouter 3 secondes comme pénalité
+            GameController.Instance.Penalite();
             Destroy(gameObject);
         }
     }
