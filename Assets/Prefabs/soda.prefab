@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 8869312763558576547}
   - component: {fileID: 5262578357772115642}
   - component: {fileID: 3167476876088581220}
+  - component: {fileID: 7334130058688575665}
   m_Layer: 0
   m_Name: soda
   m_TagString: Soda
@@ -321,3 +322,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b71c742a71d00dd4dbd4e475c1109d6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Grabbable
+  musiqueControlleur: {fileID: 0}
+--- !u!65 &7334130058688575665
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790277316163629162}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.5696414, y: 0.033976093, z: 2.4941237}
+  m_Center: {x: 0.025741206, y: 3.1330469, z: -0.056155052}

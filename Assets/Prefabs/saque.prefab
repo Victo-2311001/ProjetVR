@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: 3265311421606180904}
   - component: {fileID: 8108138605222701134}
   - component: {fileID: 4716055214074922068}
+  - component: {fileID: 8763586327554961439}
   m_Layer: 0
   m_Name: saque
   m_TagString: Saque
@@ -354,6 +355,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b71c742a71d00dd4dbd4e475c1109d6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Grabbable
+  musiqueControlleur: {fileID: 0}
+--- !u!65 &8763586327554961439
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5824158044648755825}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0352373, y: 0.0015388747, z: 0.034540303}
+  m_Center: {x: -0.00025105895, y: 0.27632368, z: 0.00039586186}
 --- !u!1 &7038560192452101329
 GameObject:
   m_ObjectHideFlags: 0
