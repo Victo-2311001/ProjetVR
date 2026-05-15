@@ -70,8 +70,10 @@ public class GameController : MonoBehaviour
                 {
                     Victoire();
                 }
-
-                Defaite();
+                else
+                {
+                    Defaite();
+                }
             }
 
         }
@@ -108,11 +110,13 @@ public class GameController : MonoBehaviour
         int indexAleatoire = Random.Range(0, drinks.Count);
         string drinkChoisi = drinks[indexAleatoire];
 
-        texteDrink.text = "Drink: " + drinkChoisi;
+        Recettes.Instance.DefinirRecetteActuelle(drinkChoisi);
+
+        texteDrink.text = "Faite le cocktail nommé: " + drinkChoisi;
     }
 
     //Afficher l'écran final de victoire
-    private void Victoire()
+    public void Victoire()
     {
         timerActif = false;
         texteFin.text = "Jeu terminé, vous avez gagné";

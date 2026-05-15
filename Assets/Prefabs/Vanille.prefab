@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 7428834172346284700}
   - component: {fileID: 1782418689033880285}
   - component: {fileID: 4494890779933303294}
+  - component: {fileID: 968158367731311622}
   m_Layer: 0
   m_Name: Vanille
   m_TagString: Vanille
@@ -301,3 +302,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b71c742a71d00dd4dbd4e475c1109d6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Grabbable
+  musiqueControlleur: {fileID: 0}
+--- !u!65 &968158367731311622
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6962015124971519145}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.9059329, y: 0.05508129, z: 1.8091964}
+  m_Center: {x: -0.010099393, y: 8.791278, z: 0.07538502}
