@@ -27,6 +27,10 @@ public class ObjetRamassable : MonoBehaviour
         grabInteractable.selectEntered.RemoveListener(OnObjetPris);
     }
 
+    /// <summary>
+    /// Quand l'objet est pris, commence le décompte pour la réapparition.
+    /// </summary>
+    /// <param name="args"></param>
     private void OnObjetPris(SelectEnterEventArgs args)
     {
         if (spawnPoint != null)

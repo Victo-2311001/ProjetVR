@@ -1,0 +1,10 @@
+# ninja log v5
+45	2890	8005686735770082	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	157184594cd75eb3
+34	2922	8005686736198749	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	5f3c882b89c241f0
+68	2957	8005686736457283	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	8788bb7b6eec6b82
+10	3059	8005686737566515	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	a7c5b3f7da161c69
+18	3091	8005686737782800	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	c7352646bca6c86e
+57	3306	8005686740059425	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	16650154e9e70fb3
+26	3402	8005686741019998	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	93f4fdd1952bb03c
+1	3490	8005686741881136	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	c3f74e7d3bbd9802
+3490	3649	8005686743450442	C:/Users/Utilisateur/Desktop/Cegep/Hiver 2026/Environnement immersif/ProjetVR/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/1o63494j/obj/arm64-v8a/libgame.so	4237bd9746dec39b

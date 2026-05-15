@@ -1,0 +1,2 @@
+C:\Users\Utilisateur\Desktop\Cegep\Hiver 2026\Environnement immersif\ProjetVR\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+C:\Users\Utilisateur\Desktop\Cegep\Hiver 2026\Environnement immersif\ProjetVR\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt

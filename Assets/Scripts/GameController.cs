@@ -31,8 +31,6 @@ public class GameController : MonoBehaviour
     [SerializeField] private float dureePartie = 60f;
     private float tempsEcoule;
     private bool timerActif;
-
-    private bool victoire = false;
     public bool partieTerminee { get; private set; }
 
     //Singleton pour accèder le GameController dans les autres classes
@@ -66,14 +64,7 @@ public class GameController : MonoBehaviour
             //Terminer jeu si temps écoulé
             if (tempsEcoule >= dureePartie)
             {
-                if (victoire)
-                {
-                    Victoire();
-                }
-                else
-                {
-                    Defaite();
-                }
+                Recettes.Instance.VerifierRecette();
             }
 
         }
@@ -119,6 +110,7 @@ public class GameController : MonoBehaviour
     public void Victoire()
     {
         timerActif = false;
+        texteFin.color = Color.green;
         texteFin.text = "Jeu terminé, vous avez gagné";
         ChangerEtat(EtatJeu.GameOver);
     }

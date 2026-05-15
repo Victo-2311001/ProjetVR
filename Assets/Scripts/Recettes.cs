@@ -16,14 +16,27 @@ public class Recettes : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        ingredientsJoueur.Clear();
+        recetteActuelle.Clear();
     }
 
 
+    /// <summary>
+    /// Ajoute l'ingrédient de l'utilisateur
+    /// </summary>
+    /// <param name="ingredient">L'ingrédient à ajouter</param>
     public void AjouterIngredient(string ingredient)
     {
-        ingredientsJoueur.Add(ingredient);
+        if (!ingredientsJoueur.Contains(ingredient))
+        {
+            ingredientsJoueur.Add(ingredient);
+        }
     }
 
+    /// <summary>
+    /// Assigne la recette actuel
+    /// </summary>
+    /// <param name="recette">La recette choisi</param>
     public void DefinirRecetteActuelle(string recette)
     {
         if (recette == "Vômit d'ogre")
@@ -36,6 +49,9 @@ public class Recettes : MonoBehaviour
             recetteActuelle = huileMoteur;
     }
 
+    /// <summary>
+    /// Vérifie si le joueur a gagner ou non
+    /// </summary>
     public void VerifierRecette()
     {
         if(ingredientsJoueur.Count != recetteActuelle.Count)

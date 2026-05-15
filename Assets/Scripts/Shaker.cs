@@ -2,6 +2,10 @@ using UnityEngine;
 
 public class Shaker : MonoBehaviour
 {
+    /// <summary>
+    /// Envoi l'ingrédient quand il touche le shaker
+    /// </summary>
+    /// <param name="other">L'ingrédient</param>
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Biere"))
