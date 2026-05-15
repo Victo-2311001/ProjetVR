@@ -1,3 +1,3 @@
 ## Nom ##
-Anthony Ramsay
-Breno Gomes Da Silva
+Anthony Ramsay (2352901) -
+Breno Gomes Da Silva ()
